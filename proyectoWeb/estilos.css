@@ -1,0 +1,162 @@
+@font-face {
+  font-family:Oceanlacy;
+  src: url(Ocean_Iacy.ttf);
+}
+
+@font-face{
+  font-family:Blueocean;
+  src: url(BLUE\ OCEAN.ttf);
+}
+
+
+* 
+ { margin:0; 
+   padding:0; 
+   box-sizing: border-box; 
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos del contenedor principal */
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-color: #0000ff transparent;
+  scrollbar-width: thin;
+}
+
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #0000ff;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+
+/* Estilos de cada capa del océano */
+.layer {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  background-color: #add8e6;
+}
+
+.epipelagic {
+  background-image: linear-gradient(to bottom, #add8e6, #87ceeb );
+}
+
+.mesopelagic {
+  background-image: linear-gradient(to bottom, #87ceeb, #00008b);
+}
+
+.bathypelagic {
+  background-image: linear-gradient(to bottom, #00008b, #000080);
+}
+
+.abyssopelagic {
+  background-image: linear-gradient(to bottom, #000080, #000000);
+}
+
+.hadalpelagic {
+  background-color: black;
+}
+
+/* Estilos de los títulos y párrafos */
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+
+p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  max-width: 600px;
+  text-align: center;
+}
+
+#white-text {
+  color: white;
+}
+
+#black-text {
+  color: black;
+}
+
+#animales 
+{
+ font-family:'Oceanlacy';
+ font-size: 45px;
+}
+
+/* Estilos de las imágenes */
+img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Estilos de la barra de profundidad */
+.depth-bar {
+   position :fixed ;
+   top:50% ; /* se ubica en la mitad de su elemnto padre*/
+   left:0; /* se ubica pegado en el margen izquierdo */
+   transform :translateY(-50%) ;
+   width:80px ;
+   height:350px ;
+   background-color:#ffffff ;
+   border-radius:0 10px 10px 0 ;
+
+   display:flex;
+   flex-direction:column ;
+
+   align-items:center ; /* centra los elementos del div */
+   justify-content:space-between ; /* fija el texto y la barra */
+   padding:10px ;
+ }
+
+ .depth-value {
+   font-size :14px ;
+   font-weight:bold ;
+ }
+
+ .depth-line {
+   width:2px;
+   height:80% ;
+   background-color:#0000ff ;
+   border-radius:50% ;
+ }
+
+ .grande{
+  font-family: 'Blueocean';
+  font-size: 50px;
+  z-index: 1;
+ }
+
+ .imagen-oceano {
+  width: 200px; /* Ancho de la imagen */
+  height: 200px; /* Alto de la imagen */
+  border-radius: 50%; /* Hacer la imagen redonda */
+  position: absolute; /* Posicionar la imagen detrás del h1 */
+  top: 50%; /* Posición vertical de la imagen */
+  left: 50%; /* Posición horizontal de la imagen */
+  transform: translate(-50%, -50%); /* Centrar la imagen respecto al contenedor */
+}
+ 
