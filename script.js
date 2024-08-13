@@ -41,3 +41,4 @@
 
    // Añadir un evento de scroll al contenedor
    container.addEventListener("scroll", updateDepthBar);
+    container.addEventListener("touchmove", updateDepthBar);
